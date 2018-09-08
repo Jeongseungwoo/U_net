@@ -11,7 +11,9 @@ def train() :
     if os.path.exists(log_dir) is False :
         os.mkdir(log_dir)
     if os.path.exists(model_dir) is False :
-        os.mkdir(model_dir)       
+        os.mkdir(model_dir)
+    if os.path.exists(os.path.join(data_dir,"test")) is False :
+        os.mkdir(os.path.join(data_dir,"test"))
     
     # preprocessing datasets (Construct datasets : augmentation & resize)
     print("Construct datasets")
