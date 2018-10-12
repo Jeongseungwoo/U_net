@@ -13,9 +13,6 @@ def preprocess() :
             data = []
             for img in img_list :
                 img = cv2.imread(os.path.join(path,img),1)
-                
-                # Data augmentation & Resize 추가 !! 
-
                 data.append(img)
             np.savez(os.path.join(data_dir,directory+".npz"),img = data)
         dir_path.append(os.path.join(data_dir,directory+".npz"))
